@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         registerReceiver(airplaneModeReceiver, IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED))
 
         //Работает ТОЛЬКО с версии 6.0 (Marshmallow) и ниже
-        //В последующих версиях подобное можно сделать только с собственными интентами для камеры
+        //В последующих версиях что-то подобное можно сделать только с собственными интентами для камеры
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.M) {
             registerReceiver(cameraButtonReceiver, IntentFilter(Intent.ACTION_CAMERA_BUTTON))
         }
